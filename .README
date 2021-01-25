@@ -1,0 +1,16 @@
+steps for development
+
+1- install node depenedencis , run 'npm install'
+2- to start the development server, run 'npm run start', game will open at url 'localhost:8080'
+
+
+step to generate output:
+1- run 'npm run buid:prod', this will create a folder called 'dist'. this is ready to upload on server.
+
+
+
+
+
+
+a- 'setScaleFactor' function is called from any js to set responsive values,this function will create a property called 'scaleFact', need to set scale value of every image created using this value.
+b- if 'setScaleFactor' is called from any 'Scene' class,this syntax is 'setScaleFactor.call(this,true);', if the function is called from a Group js, the syntax is 'setScaleFactor.call(this,false);'
