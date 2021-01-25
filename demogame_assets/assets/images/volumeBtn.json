@@ -1,0 +1,27 @@
+﻿{"frames": {
+
+"volumeBtn0":
+{
+	"frame": {"x":0,"y":0,"w":121,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":134},
+	"sourceSize": {"w":121,"h":134}
+},
+"volumeBtn1":
+{
+	"frame": {"x":126,"y":0,"w":121,"h":134},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":134},
+	"sourceSize": {"w":121,"h":134}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.0.0.326",
+	"image": "volumeBtn.png",
+	"format": "RGBA8888",
+	"size": {"w":256,"h":139},
+	"scale": "1"
+}
+}

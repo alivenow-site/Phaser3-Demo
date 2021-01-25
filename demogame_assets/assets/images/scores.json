@@ -1,0 +1,51 @@
+﻿{"frames": {
+
+"2":
+{
+	"frame": {"x":0,"y":0,"w":236,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":110},
+	"sourceSize": {"w":236,"h":110}
+},
+"5":
+{
+	"frame": {"x":236,"y":0,"w":236,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":110},
+	"sourceSize": {"w":236,"h":110}
+},
+"10":
+{
+	"frame": {"x":0,"y":110,"w":236,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":110},
+	"sourceSize": {"w":236,"h":110}
+},
+"15":
+{
+	"frame": {"x":236,"y":110,"w":236,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":110},
+	"sourceSize": {"w":236,"h":110}
+},
+"-10":
+{
+	"frame": {"x":0,"y":220,"w":236,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":110},
+	"sourceSize": {"w":236,"h":110}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.0.0.326",
+	"image": "scores.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":350},
+	"scale": "1"
+}
+}

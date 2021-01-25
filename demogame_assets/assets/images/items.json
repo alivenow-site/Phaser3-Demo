@@ -1,0 +1,131 @@
+﻿{"frames": {
+
+"bottle":
+{
+	"frame": {"x":328,"y":0,"w":155,"h":507},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":155,"h":507},
+	"sourceSize": {"w":155,"h":507}
+},
+"box":
+{
+	"frame": {"x":790,"y":0,"w":293,"h":182},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":293,"h":182},
+	"sourceSize": {"w":293,"h":182}
+},
+"bread":
+{
+	"frame": {"x":488,"y":388,"w":302,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":302,"h":152},
+	"sourceSize": {"w":302,"h":152}
+},
+"can1":
+{
+	"frame": {"x":1304,"y":0,"w":107,"h":283},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":107,"h":283},
+	"sourceSize": {"w":107,"h":283}
+},
+"can2":
+{
+	"frame": {"x":1185,"y":0,"w":114,"h":284},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":284},
+	"sourceSize": {"w":114,"h":284}
+},
+"cheese":
+{
+	"frame": {"x":488,"y":0,"w":297,"h":196},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":297,"h":196},
+	"sourceSize": {"w":297,"h":196}
+},
+"chicken":
+{
+	"frame": {"x":794,"y":187,"w":191,"h":191},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":191,"h":191},
+	"sourceSize": {"w":191,"h":191}
+},
+"cutter":
+{
+	"frame": {"x":0,"y":0,"w":323,"h":301},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":323,"h":301},
+	"sourceSize": {"w":323,"h":301}
+},
+"flower":
+{
+	"frame": {"x":1185,"y":289,"w":111,"h":112},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":111,"h":112},
+	"sourceSize": {"w":111,"h":112}
+},
+"mashroom":
+{
+	"frame": {"x":990,"y":373,"w":115,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":124},
+	"sourceSize": {"w":115,"h":124}
+},
+"onion":
+{
+	"frame": {"x":990,"y":187,"w":190,"h":181},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":190,"h":181},
+	"sourceSize": {"w":190,"h":181}
+},
+"pizza":
+{
+	"frame": {"x":0,"y":306,"w":272,"h":228},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":272,"h":228},
+	"sourceSize": {"w":272,"h":228}
+},
+"prawn":
+{
+	"frame": {"x":1110,"y":406,"w":98,"h":110},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":110},
+	"sourceSize": {"w":98,"h":110}
+},
+"tomato":
+{
+	"frame": {"x":1304,"y":288,"w":117,"h":125},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":117,"h":125},
+	"sourceSize": {"w":117,"h":125}
+},
+"veg":
+{
+	"frame": {"x":488,"y":201,"w":301,"h":182},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":301,"h":182},
+	"sourceSize": {"w":301,"h":182}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.0.0.326",
+	"image": "items.png",
+	"format": "RGBA8888",
+	"size": {"w":1450,"h":550},
+	"scale": "1"
+}
+}

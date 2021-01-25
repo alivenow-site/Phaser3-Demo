@@ -1,0 +1,83 @@
+﻿{"frames": {
+
+"button1":
+{
+	"frame": {"x":0,"y":254,"w":538,"h":121},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":538,"h":121},
+	"sourceSize": {"w":538,"h":121}
+},
+"button2":
+{
+	"frame": {"x":0,"y":0,"w":538,"h":122},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":538,"h":122},
+	"sourceSize": {"w":538,"h":122}
+},
+"button3":
+{
+	"frame": {"x":0,"y":127,"w":538,"h":122},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":538,"h":122},
+	"sourceSize": {"w":538,"h":122}
+},
+"fb1":
+{
+	"frame": {"x":652,"y":221,"w":104,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":104,"h":105},
+	"sourceSize": {"w":104,"h":105}
+},
+"fb2":
+{
+	"frame": {"x":543,"y":111,"w":105,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":105},
+	"sourceSize": {"w":105,"h":105}
+},
+"tw1":
+{
+	"frame": {"x":653,"y":0,"w":105,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":106},
+	"sourceSize": {"w":105,"h":106}
+},
+"tw2":
+{
+	"frame": {"x":543,"y":0,"w":105,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":106},
+	"sourceSize": {"w":105,"h":106}
+},
+"wt1":
+{
+	"frame": {"x":653,"y":111,"w":105,"h":105},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":105,"h":105},
+	"sourceSize": {"w":105,"h":105}
+},
+"wt2":
+{
+	"frame": {"x":543,"y":221,"w":104,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":104,"h":106},
+	"sourceSize": {"w":104,"h":106}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.0.0.326",
+	"image": "buttons.png",
+	"format": "RGBA8888",
+	"size": {"w":770,"h":382},
+	"scale": "1"
+}
+}

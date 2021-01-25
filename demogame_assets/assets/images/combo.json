@@ -1,0 +1,107 @@
+﻿{"frames": {
+
+"combo2_1":
+{
+	"frame": {"x":0,"y":0,"w":326,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo2_2":
+{
+	"frame": {"x":331,"y":0,"w":326,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo2_3":
+{
+	"frame": {"x":662,"y":0,"w":326,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo3_1":
+{
+	"frame": {"x":0,"y":213,"w":326,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo3_2":
+{
+	"frame": {"x":331,"y":213,"w":326,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo3_3":
+{
+	"frame": {"x":662,"y":213,"w":326,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":79,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo4_1":
+{
+	"frame": {"x":0,"y":426,"w":348,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":68,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo4_2":
+{
+	"frame": {"x":353,"y":426,"w":348,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":68,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"combo4_3":
+{
+	"frame": {"x":0,"y":639,"w":348,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":68,"y":0,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"comboHead1":
+{
+	"frame": {"x":353,"y":639,"w":483,"h":127},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":40,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"comboHead2":
+{
+	"frame": {"x":0,"y":852,"w":483,"h":127},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":40,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+},
+"comboHead3":
+{
+	"frame": {"x":488,"y":852,"w":483,"h":127},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":40,"w":483,"h":208},
+	"sourceSize": {"w":483,"h":208}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.0.0.326",
+	"image": "combo.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1"
+}
+}
