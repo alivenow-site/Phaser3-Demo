@@ -1,0 +1,107 @@
+﻿{"frames": {
+
+"tshirt":
+{
+	"frame": {"x":10,"y":10,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"youtube":
+{
+	"frame": {"x":10,"y":315,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"teddy":
+{
+	"frame": {"x":10,"y":620,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"dates":
+{
+	"frame": {"x":242,"y":10,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"dinner":
+{
+	"frame": {"x":474,"y":10,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"newsfeed":
+{
+	"frame": {"x":706,"y":10,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"tshirt_1":
+{
+	"frame": {"x":242,"y":315,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"youtube_1":
+{
+	"frame": {"x":242,"y":620,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"teddy_1":
+{
+	"frame": {"x":474,"y":315,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"dates_1":
+{
+	"frame": {"x":474,"y":620,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"dinner_1":
+{
+	"frame": {"x":706,"y":315,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+},
+"newsfeed_1":
+{
+	"frame": {"x":706,"y":620,"w":217,"h":290},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":290},
+	"sourceSize": {"w":217,"h":290}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.0.0.326",
+	"image": "icons.png",
+	"format": "RGBA8888",
+	"size": {"w":952,"h":935},
+	"scale": "1"
+}
+}
