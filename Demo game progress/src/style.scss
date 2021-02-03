@@ -1,0 +1,380 @@
+
+@font-face { 
+    font-family: 'Helvetica'; 
+    src: url("../assets/fonts/Helvetica.ttc");
+ }
+ @font-face { 
+    font-family: 'appetite'; 
+    src: url("../assets/fonts/appetite.ttf");
+ }
+
+ html{
+     overflow: hidden;
+ }
+#home{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    flex-direction: column;
+    &.active{
+        z-index: 1000;
+    }
+    &.active2{
+        display: flex;
+    }
+    .sec1{
+        width: 100%;
+        height: 68%;
+        // background-image: url('../assets/bg1.png');
+        background-size: cover;
+        background-position: top center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .header{
+            position: absolute;
+            top:0;
+            width: 100%;
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+        #logo{
+            position: relative;
+            width: 30%;
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+
+        .prize_holder{
+            width: 35vh;
+            height: 39.4954vh;//76.4954vw;
+            opacity: 0;
+            margin-bottom: 7vh;
+                &.dates, &.dinner, &.newsfeed, &.teddy, &.tshirt,&.youtube
+                { 
+                    transition: opacity ease-out .25s;
+                    opacity: 1;
+                    max-width: 100%; background-size: 100%; 
+                    // background-image: url('../assets/prizes.png')
+                    ; }
+                
+                &.dates { background-position: 0 -.3%; background-size: 100%; }
+                &.dinner { background-position: 0 19.73%; background-size: 100%; }
+                &.newsfeed { background-position: 0 39.5%; background-size: 100%; }
+                &.teddy { background-position: 0 59.5%; background-size: 100%; }
+                &.tshirt { background-position: 0 79.6%; background-size: 100%; }
+                &.youtube { background-position: 0 100%; background-size: 100%; }
+            
+        }
+    }
+    .sec2{
+        width: 100%;
+        bottom: 0;
+        height: 44%;
+        // background-image: url('../assets/bg2.png');
+        background-size: cover;
+        background-position: top center;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        #code_head{
+            position: relative;
+            width: 80%;
+            margin: 6vh auto 0vh auto;
+            img{
+                position: relative;
+                width: 100%;
+            }
+
+        }
+        #code_input{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+          /*   margin: auto; */
+            input{
+                width:16.67%;
+                margin: 0 1vw;
+                font-size: 8vw;
+                font-family: 'Helvetica';
+                text-align: center;
+                color: #f5000f;
+                border-radius: 5px;
+           /*      line-height: 8vw; */
+                padding: 2vw 0;
+            }
+        }
+        #terms_sec{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            #terms_check{
+                input[type='checkbox']{
+                    width:5vw;
+                    height: 5vw;
+                }
+                margin-right:2vw;
+            }
+            #terms_text{
+                color: #ffffff;
+                font-family: 'Helvetica';
+                font-size:3.5vw;
+                u{
+                    color:#e9a221;
+                }
+            }
+        }
+        #home_start{
+            position: relative;
+            width: 30vw;
+            height: 15vw;
+            // background-image: url('../assets/buttons.png');
+            background-position: 0 66.546112%; 
+            background-size: 121.052632%;
+            &:hover{
+                background-position: 0 100%; background-size: 121.052632%;
+            }
+        }
+    }
+}
+
+#result{
+   
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    flex-direction: column;
+    &.active2{
+        display: flex;
+    }
+    &.active{
+        z-index: 1000;
+    }
+    .sec1{
+        width: 100%;
+        height: 68%;
+        // background-image: url('../assets/bg1.png');
+        background-size: cover;
+        background-position: top center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .header{
+            position: absolute;
+            top:0;
+            width: 100%;
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+        #logo{
+            position: relative;
+            width: 30%;
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+        .prize_holder{
+            width: 35vh;
+          
+            margin-bottom: 9vh;
+            img{
+                position: relative;
+                width: 100%;
+            }
+            
+        }
+    }
+    .sec2{
+        width: 100%;
+        bottom: 0;
+        height: 48%;
+        // background-image: url('../assets/bg2.png');
+        background-size: cover;
+        background-position: top center;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        #register_head{
+            position: relative;
+            margin: 6vh auto 0vh auto;
+            font-family: 'appetite';
+            color:#ffb300;
+            width: 75%;
+            line-height: 6vw;
+            text-align: center;
+            font-size: 5vw;
+        }
+        .register_content{
+            width: 70%;
+            position: relative;
+            .register_input{
+                width: calc(100% - 8vw);
+                position: relative;
+                margin: .5vh 0 0 0;
+                &.input_mobile{
+                    width: calc(100% - 19vw);
+                    .mobile_pre{
+                        color: #330370;
+                        font-size:4vw;
+                        position: absolute;
+                        top:50%;
+                        transform: translateY(-50%);
+                        left:0;
+                        padding: 0 0 0 2vw;
+                       
+                        width:11vw;
+                        z-index: 100;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        border-right: 2px solid #330370;
+                        justify-content: center;
+                        font-family: 'Helvetica';
+                    }
+                }
+                input{
+                    border-radius: 10px;
+                    padding: 0 4vw;
+                    width: 100%;
+                    position: relative;
+                    color: #330370;
+                    font-family: 'Helvetica';
+                    font-size:4vw;
+                    line-height: 10vw;
+                    &::placeholder{
+                        color: #330370;
+                    }
+                    &#mobile{
+                        padding: 0 4vw 0 15vw;
+                    }
+                    &.error{
+                        border-color:#ff0000;
+                    }
+                }
+            }
+        }
+        #home_submit{
+            // background-image: url('../assets/buttons.png');
+            position: relative;
+            width: 30vw;
+            height: 12vw;
+            background-position: 0 131.546112%;
+            background-size: 100%;
+            &:hover{
+                background-position:0 165%; background-size:100%;
+            } 
+        }
+    }
+}
+
+#thankyou{
+
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    flex-direction: column;
+    &.active2{
+        display: flex;
+    }
+    &.active{
+        z-index: 1000;
+    }
+    .sec1{
+        width: 100%;
+        height: 68%;
+        // background-image: url('../assets/bg1.png');
+        background-size: cover;
+        background-position: top center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .header{
+            position: absolute;
+            top:0;
+            width: 100%;
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+        #logo{
+            position: relative;
+            width: 30%;
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+        .prize_holder{
+            width: 35vh;
+          
+            margin-bottom: 15vh;
+            img{
+                position: relative;
+                width: 100%;
+            }
+            
+        }
+    }
+    .sec2{
+        width: 100%;
+        bottom: 0;
+        height: 48%;
+        // background-image: url('../assets/bg2.png');
+        background-size: cover;
+        background-position: top center;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        #thankyou_head{
+            position: relative;
+            margin: 6vh auto 0vh auto;
+            font-family: 'appetite';
+            color:#ffb300;
+            width: 75%;
+            line-height: 6vw;
+            text-align: center;
+            font-size: 8vw;
+        }
+        #social_sec{
+            width:60vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 8vh;
+            .social_fb,.social_tw,.social_wt{
+                width:17vw;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
