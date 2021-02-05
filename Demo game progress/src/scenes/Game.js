@@ -25,7 +25,7 @@ export default class Game extends Phaser.Scene {
     
 
     for(var i=2; i<=13; i++){
-      this["item"+String(i)] = this.add.sprite((Global.isMobile) ? this.c_w*.06+(-2+i)*70*this.scaleFact : this.c_w*.06+(-2+i)*120*this.scaleFact ,this.c_h*.0, "items",this.itemFrames[i])
+      this["item"+String(i)] = this.add.sprite((Global.isMobile) ? this.c_w*.06+(-2+i)*70*this.scaleFact : this.c_w*.08+(-2+i)*145*this.scaleFact ,this.c_h*.0, "items",this.itemFrames[i])
       this["item"+String(i)].setScale(this.scaleFact*.4);
       this["item"+String(i)].alpha = 0; 
     }
@@ -40,29 +40,32 @@ export default class Game extends Phaser.Scene {
     this.logo3 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.59 : this.c_h*.62, "logo3");
     this.logo3.alpha = 0
     
-    this.title1 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.42 : this.c_h*.4, "title1");
+    this.title1 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.42 : this.c_h*.3, "title1");
     this.title1.alpha = 0;
-    this.title2 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.48 : this.c_h*.49, "title2");
+    this.title2 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.48 : this.c_h*.4, "title2");
     this.title2.alpha = 0;
-    this.title3 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.53 : this.c_h*.55, "title3");
+    this.title3 = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.53 : this.c_h*.47, "title3");
     this.title3.alpha = 0;
 
     this.start_btn = this.add.sprite(this.c_w*.5, this.c_h*.63, "buttons","button1");
-    this.start_btn.setInteractive();
+    this.start_btn.setInteractive({ cursor: 'pointer' });
     this.start_btn.alpha = 0;
     // this.start = this.add.text(this.start_btn.x, this.start_btn.y, 'Start', { fill: '#0f0', font-family: 'Helvetica' });
     this.start_btn.on('pointerdown', () => { this.scorecard(); });
+
+    this.start_btn.on('pointerover', () => {this.start_btn.setTexture ("buttons",'button3')});
+    this.start_btn.on('pointerout', () => {this.start_btn.setTexture ("buttons",'button1')});
     this.start=this.make.text({
       x:this.start_btn.x,
       y:this.start_btn.y,
-      text:"Start",
+      text:"START",
       origin: {
           x: 0.5,
           y: 0.5
       },
       style: {
-          font: (Global.isMobile)?''+String(30*this.scaleFact/.5)+`px appetite`:''+String(30*this.scaleFact/.5)+`px appetite`,
-          fill: '#ffb602',
+          font: (Global.isMobile)?''+String(22*this.scaleFact/.5)+`px appetite`:''+String(22*this.scaleFact/.5)+`px appetite`,
+          fill: '#ffffff',
           align:"center",
           wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
       }
@@ -71,13 +74,14 @@ export default class Game extends Phaser.Scene {
   this.start.setDepth(2004);
   this.start.alpha = 0
 
-  this.ScoreCard = this.add.sprite((Global.isMobile) ? this.c_w*.5 : this.c_w*.27, (Global.isMobile) ? this.c_h*.33 : this.c_h*.5, "ScoreCard");
+  this.ScoreCard = this.add.sprite((Global.isMobile) ? this.c_w*.5 : this.c_w*.3, (Global.isMobile) ? this.c_h*.33 : this.c_h*.46, "ScoreCard");
   this.ScoreCard.alpha = 0;
-  this.combo = this.add.sprite((Global.isMobile) ? this.c_w*.5 : this.c_w*.72, (Global.isMobile) ? this.c_h*.64 : this.c_h*.5, (Global.isMobile) ? "combo" : "combo-desk");
+  this.combo = this.add.sprite((Global.isMobile) ? this.c_w*.5 : this.c_w*.695, (Global.isMobile) ? this.c_h*.64 : this.c_h*.46, (Global.isMobile) ? "combo" : "combo-desk");
   this.combo.alpha = 0;
 
-  this.How_btn = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.8 : this.c_h*.83, "buttons","button1");
-    this.How_btn.setInteractive();
+  this.How_btn = this.add.sprite(this.c_w*.5, (Global.isMobile) ? this.c_h*.8 : this.c_h*.9-this.extraTop, "buttons","button1");
+    this.How_btn.setInteractive({ cursor: 'pointer' });
+
     this.Howtext=this.make.text({
       x:this.How_btn.x,
       y:this.How_btn.y,
@@ -88,28 +92,30 @@ export default class Game extends Phaser.Scene {
       },
       style: {
           font: (Global.isMobile)?''+String(20*this.scaleFact/.5)+`px appetite`:''+String(20*this.scaleFact/.5)+`px appetite`,
-          fill: '#ffb602',
+          fill: '#ffffff',
           align:"center",
           wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
       }
       
   });
   this.How_btn.on('pointerdown', () => { this.scoreFadeOut(); });
+  this.How_btn.on('pointerover', () => {this.How_btn.setTexture ("buttons",'button3')});
+  this.How_btn.on('pointerout', () => {this.How_btn.setTexture ("buttons",'button1')});
   this.Howtext.setDepth(2004);
   this.How_btn.alpha = 0;
   this.Howtext.alpha = 0;
 
     this.BG.setScale(this.scaleFact);
     this.logo.setScale(this.scaleFact*.7);
-    this.title1.setScale(this.scaleFact*.65);
+    this.title1.setScale(this.scaleFact*.8);
     this.logo1.setScale(this.scaleFact*.6);
     this.logo2.setScale(this.scaleFact*.6);
     this.logo3.setScale(this.scaleFact*.6);
-    this.start_btn.setScale(this.scaleFact*.6);
+    this.start_btn.setScale(this.scaleFact*.8);
     this.start.setDepth(2004);
-    this.ScoreCard.setScale(this.scaleFact*.7);
-    this.combo.setScale(this.scaleFact*.7);
-    this.How_btn.setScale(this.scaleFact*.6)
+    this.ScoreCard.setScale((Global.isMobile) ? this.scaleFact*.8 : this.scaleFact*.75);
+    this.combo.setScale((Global.isMobile) ? this.scaleFact*.75 : this.scaleFact*.75);
+    this.How_btn.setScale(this.scaleFact*.8)
  
 
     this.instruction=new Instruction(this);
@@ -185,7 +191,7 @@ this.tweens.add({
 }); 
 this.tweens.add({
   targets: this.item9,
-  y:this.c_h*.68,
+  y:this.c_h*.78,
   ease: 'Cubic.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
   duration: 800,
   repeat: 0,
@@ -193,7 +199,7 @@ this.tweens.add({
 });
 this.tweens.add({
   targets: this.item10,
-  y:this.c_h*.25,
+  y:(Global.isMobile) ? this.c_h*.25 : this.c_h*.2,
   ease: 'Cubic.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
   duration: 800,
   repeat: 0,
@@ -232,7 +238,7 @@ this.tweens.add({
     this.tweens.add({
       targets: this.logo1,
       alpha:1,
-      y:(Global.isMobile) ? this.c_h*.45 : this.c_h*.38,
+      y:(Global.isMobile) ? this.c_h*.45 : this.c_h*.39,
       ease: 'Cubic.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
       duration: 500,
       repeat: 0,
@@ -245,20 +251,20 @@ this.tweens.add({
     ease: 'Back.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
     duration: 800,
     repeat: 0,
-    delay:0
+    delay:600
 });
 
 setTimeout(() => {
   this.fadeOut();
-}, 1000);
+}, 1200);
   }
 
   fadeOut(){
 // console.log("playy")
 this.tweens.add({
   targets: this.logo3,
-  x:this.c_w*.52,
-  y:this.c_h*.57,
+  // x:this.c_w*.52,
+  y:(Global.isMobile) ? this.c_h*.57: this.c_h*.65,
   alpha:0,
   ease: 'Cubic.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
   duration: 800,
@@ -267,8 +273,8 @@ this.tweens.add({
 });
 this.tweens.add({
   targets: this.logo1,
-  x:this.c_w*.52,
-  y:this.c_h*.43,
+  // x:this.c_w*.52,
+  y:(Global.isMobile) ? this.c_h*.43: this.c_h*.45,
   alpha:0,
   ease: 'Cubic.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
   duration: 800,
@@ -277,8 +283,8 @@ this.tweens.add({
 });
 this.tweens.add({
   targets: this.logo2,
-  x:this.c_w*.52,
-  y:this.c_h*.5,
+  // x:this.c_w*.52,
+  y:(Global.isMobile) ? this.c_h*.5: this.c_h*.55,
   alpha:0,
   ease: 'Cubic.Out',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
   duration: 500,
@@ -352,7 +358,7 @@ this.tweens.add({
     });
     this.tweens.add({
       targets: this.start_btn,
-      y:this.c_h*.64,
+      y:this.c_h*.68,
       alpha:0,
       ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
       duration: 800,
@@ -361,7 +367,7 @@ this.tweens.add({
     });
     this.tweens.add({
       targets: this.start,
-      y:this.c_h*.64,
+      y:this.c_h*.68,
       alpha:0,
       ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
       duration: 800,
@@ -401,7 +407,7 @@ this.tweens.add({
     });
     this.tweens.add({
       targets: this.How_btn,
-      y:this.c_h*.82,
+      y:(Global.isMobile) ? this.c_h*.82 : this.c_h*.95,
       alpha:0,
       ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
       duration: 800,
@@ -410,7 +416,7 @@ this.tweens.add({
     });
     this.tweens.add({
       targets: this.Howtext,
-      y:this.c_h*.82,
+      y:(Global.isMobile) ? this.c_h*.82 : this.c_h*.95,
       alpha:0,
       ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
       duration: 800,

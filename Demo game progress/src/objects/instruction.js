@@ -21,7 +21,7 @@ export default class Instruction extends Phaser.GameObjects.Container {
         // console.log(this.scene.sys.game.scale.gameSize.width," width")
     setScaleFactor.call(this,false);
     this.pointer = this.scene.input.activePointer;
-    this.character = this.scene.add.sprite(this.c_w*.5,(Global.isMobile) ? this.c_h*.952-this.extraTop : this.c_h*.93-this.extraTop,"character");
+    this.character = this.scene.add.sprite(this.c_w*.5,(Global.isMobile) ? this.c_h*.952-this.extraTop : this.c_h*.89-this.extraTop,"character");
     
 this.itemGroup = this.scene.add.group();
 
@@ -35,15 +35,15 @@ this.itemGroup = this.scene.add.group();
             y: 0.5
         },
         style: {
-            font: (Global.isMobile)?''+String(13*this.scaleFact/.5)+`px appetite`:''+String(15*this.scaleFact/.5)+`px appetite`,
-            fill: '#ffb602',
+            font: (Global.isMobile)?''+String(13*this.scaleFact/.5)+`px appetite`:''+String(13*this.scaleFact/.5)+`px appetite`,
+            fill: '#ffffff',
             align:"center",
           //   wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
         }
         
     });
     this.ScoreText.setDepth(2004)
-    this.UI_Time = this.scene.add.sprite((Global.isMobile) ? this.c_w*.1+this.extraLeftPer : this.c_w*.8-this.extraLeftPer, -this.c_h*.05+this.extraTop, "UITime");
+    this.UI_Time = this.scene.add.sprite((Global.isMobile) ? this.c_w*.1+this.extraLeftPer : this.c_w*.81-this.extraLeftPer, -this.c_h*.05+this.extraTop, "UITime");
     this.TimeText=this.scene.make.text({
         x:this.UI_Time.x,
         y:this.UI_Time.y,
@@ -53,8 +53,8 @@ this.itemGroup = this.scene.add.group();
             y: 0.5
         },
         style: {
-            font: (Global.isMobile)?''+String(13*this.scaleFact/.5)+`px appetite`:''+String(15*this.scaleFact/.5)+`px appetite`,
-            fill: '#ffb602',
+            font: (Global.isMobile)?''+String(15*this.scaleFact/.5)+`px appetite`:''+String(13*this.scaleFact/.5)+`px appetite`,
+            fill: '#ffffff',
             align:"center",
           //   wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
         }
@@ -71,7 +71,7 @@ this.itemGroup = this.scene.add.group();
           y: 0.5
       },
       style: {
-          font: (Global.isMobile)?''+String(15*this.scaleFact/.5)+`px appetite`:''+String(20*this.scaleFact/.5)+`px appetite`,
+          font: (Global.isMobile)?''+String(15*this.scaleFact/.5)+`px appetite`:''+String(25*this.scaleFact/.5)+`px appetite`,
           fill: '#ffffff',
           align:"center",
         //   wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
@@ -89,7 +89,7 @@ this.itemGroup = this.scene.add.group();
         y: 0.5
     },
     style: {
-        font: (Global.isMobile)?''+String(15*this.scaleFact/.5)+`px appetite`:''+String(20*this.scaleFact/.5)+`px appetite`,
+        font: (Global.isMobile)?''+String(15*this.scaleFact/.5)+`px appetite`:''+String(25*this.scaleFact/.5)+`px appetite`,
         fill: '#ffffff',
         align:"center",
       //   wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
@@ -102,19 +102,21 @@ this.Scoretxt.setDepth(2004)
     this.UI_Time.alpha = 0;
 
     this.Ready_btn = this.scene.add.sprite(this.c_w*.5, this.c_h*.45, "buttons","button1");
-    this.Ready_btn.setInteractive();
+    this.Ready_btn.setInteractive({ cursor: 'pointer' });
     this.Ready_btn.on('pointerdown', () => { this.patchFadeOut(); });
+    this.Ready_btn.on('pointerover', () => {this.Ready_btn.setTexture ("buttons",'button3')});
+    this.Ready_btn.on('pointerout', () => {this.Ready_btn.setTexture ("buttons",'button1')});
     this.ReadyText=this.scene.make.text({
       x:this.Ready_btn.x,
       y:this.Ready_btn.y,
-      text:"READY   GO!",
+      text:"READY,   GO!",
       origin: {
           x: 0.5,
           y: 0.5
       },
       style: {
           font: (Global.isMobile)?''+String(20*this.scaleFact/.5)+`px appetite`:''+String(20*this.scaleFact/.5)+`px appetite`,
-          fill: '#ffb602',
+          fill: '#ffffff',
           align:"center",
         //   wordWrap: { width: this.game.canvas.width*.8-this.extraLeftPer, useAdvancedWrap: true }
       }
@@ -128,10 +130,11 @@ this.Scoretxt.setDepth(2004)
     this.HowtoPlayMobile_patch.alpha = 0;
     
 
-    this.character.setScale(this.scaleFact*.6);
-    this.UI_Score.setScale((Global.isMobile) ? this.scaleFact*.6 : this.scaleFact*.8)
-    this.UI_Time.setScale((Global.isMobile) ? this.scaleFact*.6 : this.scaleFact*.8)
-    this.HowtoPlayMobile_patch.setScale((Global.isMobile) ? this.scaleFact*.5 : this.scaleFact*.7);
+    this.character.setScale((Global.isMobile) ? this.scaleFact*.6 : this.scaleFact*.8);
+    this.UI_Score.setScale((Global.isMobile) ? this.scaleFact*.6 : this.scaleFact*.72)
+    this.UI_Time.setScale((Global.isMobile) ? this.scaleFact*.6 : this.scaleFact*.72)
+    this.HowtoPlayMobile_patch.setScale((Global.isMobile) ? this.scaleFact*.5 : this.scaleFact*.82);
+    this.Ready_btn.setScale(this.scaleFact*.75)
 
    /*   */
 
@@ -286,7 +289,7 @@ moveRight(){
 patchFadeOut(){
   this.scene.tweens.add({
     targets: this.HowtoPlayMobile_patch,
-    y:this.c_h*.55,
+    y:this.c_h*.57,
     alpha:0,
     ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
     duration: 800,
@@ -295,7 +298,7 @@ patchFadeOut(){
   });
   this.scene.tweens.add({
     targets: this.Ready_btn,
-    y:this.c_h*.75,
+    y:this.c_h*.9,
     alpha:0,
     ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
     duration: 800,
@@ -304,7 +307,7 @@ patchFadeOut(){
   });
   this.scene.tweens.add({
     targets: this.ReadyText,
-    y:this.c_h*.73,
+    y:this.c_h*.9,
     alpha:0,
     ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
     duration: 800,
@@ -360,10 +363,16 @@ itemFall(){
   if (this.timerCtr) {
       clearTimeout(this.timerCtr);
   }
-var dist =Math.floor((Math.random() * 7) + 2)/10;;
-console.log(dist,"  dist")
-  this.fallItem = this.scene.add.sprite(this.scene.sys.game.scale.gameSize.width * dist+0.3, 0, "items",this.itemFrames[Math.floor(Math.random() * (13 - 0) + 0)]);
-  this.fallItem.setScale(this.scaleFact*.6);
+var dist = Math.floor((Math.random() * 7) + 2)/10;;
+// console.log(dist,"  dist")
+var rand_itm = Math.floor(Math.random() * (13 - 0) + 0);
+  this.fallItem = this.scene.add.sprite(this.scene.sys.game.scale.gameSize.width * dist+0.3, 0, "items",this.itemFrames[rand_itm]);
+  if(rand_itm == 0 || rand_itm == 2 || rand_itm == 6 || rand_itm == 4){
+    this.fallItem.setScale(this.scaleFact*.42);
+  } else {
+    this.fallItem.setScale(this.scaleFact*.55);
+  }
+
   this.itemGroup.add(this.fallItem);
   
   this.timerCtr = setTimeout(this.itemFall.bind(this), Math.floor(Math.random() * (+max - +min)) + min);
@@ -372,7 +381,7 @@ console.log(dist,"  dist")
 patchFadeIN(){    
     this.scene.tweens.add({
         targets: this.UI_Score,
-        y:(Global.isMobile) ? this.c_h*.05+this.extraTop : this.c_h*.1+this.extraTop,
+        y:(Global.isMobile) ? this.c_h*.05+this.extraTop : this.c_h*.11+this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -381,7 +390,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.ScoreText,
-        y:(Global.isMobile) ? this.c_h*.04+this.extraTop : this.c_h*.07+this.extraTop,
+        y:(Global.isMobile) ? this.c_h*.04+this.extraTop : this.c_h*.09+this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -390,7 +399,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.UI_Time,
-        y:(Global.isMobile) ? this.c_h*.05+this.extraTop : this.c_h*.1+this.extraTop,
+        y:(Global.isMobile) ? this.c_h*.05+this.extraTop : this.c_h*.11+this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -399,7 +408,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.TimeText,
-        y:(Global.isMobile) ? this.c_h*.04+this.extraTop : this.c_h*.07+this.extraTop,
+        y:(Global.isMobile) ? this.c_h*.04+this.extraTop : this.c_h*.09+this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -408,7 +417,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.Timetxt,
-        y:(Global.isMobile) ? this.c_h*.057 +this.extraTop: this.c_h*.1+this.extraTop,
+        y:(Global.isMobile) ? this.c_h*.057 +this.extraTop: this.c_h*.12+this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -417,7 +426,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.Scoretxt,
-        y:(Global.isMobile) ? this.c_h*.057+this.extraTop : this.c_h*.1+this.extraTop,
+        y:(Global.isMobile) ? this.c_h*.057+this.extraTop : this.c_h*.12+this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -426,7 +435,7 @@ patchFadeIN(){
       });
     this.scene.tweens.add({
         targets: this.HowtoPlayMobile_patch,
-        y: (Global.isMobile) ? this.c_h*.45 : this.c_h*.36,
+        y: (Global.isMobile) ? this.c_h*.45 : this.c_h*.4,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -435,7 +444,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.Ready_btn,
-        y: (Global.isMobile) ? this.c_h*.68 : this.c_h*.7,
+        y: (Global.isMobile) ? this.c_h*.68 : this.c_h*.82-this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
@@ -444,7 +453,7 @@ patchFadeIN(){
       });
       this.scene.tweens.add({
         targets: this.ReadyText,
-        y:(Global.isMobile) ? this.c_h*.68 : this.c_h*.7,
+        y:(Global.isMobile) ? this.c_h*.68 : this.c_h*.82-this.extraTop,
         alpha:1,
         ease: 'Cubic.InOut',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
         duration: 800,
